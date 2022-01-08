@@ -1,0 +1,25 @@
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, button, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, html, i, iframe, img, input, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, pre, q, ruby, s, samp, section, select, small, span, strike, strong, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 18px;
+    list-style: none;
+}
+/* heml,body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+} */
+:root {
+    --color-input-bg: #f4f5f5;
+    --color-input-error-bg: #ffece8;
+    --color-input-placeholder: #86909c;
+    --color-input-text: #4e5969;
+    --color-input-icon: #f53f3f;
+}
