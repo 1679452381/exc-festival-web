@@ -3,13 +3,14 @@
     <el-image
       v-if="imgurl.length !== 0"
       :src="imgurl[0].url"
+      :onerror="errImage"
       style="width: 288px; height: 160px"
       fit="fill"
     />
 
     <el-image
       v-else
-      src="https://jxj.hndt.com/assets/img/default.23a8ecaa.png"
+      src="@/assets/images/default.png"
       style="width: 288px; height: 160px"
       fit="fill"
     />
@@ -25,6 +26,11 @@ import titleFilter from "@/filters/titleFilter";
 
 export default {
   name: "gd-info",
+  data() {
+    return {
+      errImage: 'this.src="' + require("@/assets/images/default.png") + '"',
+    };
+  },
   props: ["title", "imgurl"],
   filters: {
     titleFilter,

@@ -3,11 +3,9 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import '../public/css/global.css'
-import service from "./utils/axios";
 import './plugins/element'
 
 Vue.config.productionTip = false;
-Vue.prototype.$http = service
 
 new Vue({
   router,

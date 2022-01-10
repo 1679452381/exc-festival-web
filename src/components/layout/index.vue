@@ -1,16 +1,8 @@
 <template>
   <div>
-    <el-container>
-      <el-header>
-        <gd-header></gd-header>
-      </el-header>
-      <el-main>
-        <router-view />
-      </el-main>
-      <el-footer class="footer">
-        <gd-footer></gd-footer>
-      </el-footer>
-    </el-container>
+    <gd-header></gd-header>
+    <router-view />
+    <gd-footer></gd-footer>
   </div>
 </template>
 
@@ -25,11 +17,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.el-header {
-  padding: 0;
-  height: 356px;
-}
-.footer {
-}
-</style>
+<style scoped></style>

@@ -1,7 +1,7 @@
-import service from '../utils/axios'
+import service from '../utils/request'
 
-export async function getArticles(channelId = '', pageNo, pageSize, tenantId = 'jxjadmin') {
-    const articles = await service.get('/articles', {
+export function getArticles(channelId = '', pageNo, pageSize, tenantId = 'jxjadmin') {
+    return service.get('/articles', {
         params: {
             channelId,
             pageNo,
@@ -9,15 +9,13 @@ export async function getArticles(channelId = '', pageNo, pageSize, tenantId = '
             tenantId
         }
     })
-    return articles
 }
 
-export async function getArticleInfo(articleId, tenantId = 'jxjadmin') {
-    const articles = await service.get('/article', {
+export function getArticleInfo(articleId, tenantId = 'jxjadmin') {
+    return service.get('/article', {
         params: {
             articleId,
             tenantId
         }
     })
-    return articles
 }

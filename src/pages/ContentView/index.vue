@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="contentView">
     <div v-if="infoList.length === 0" class="contentview">
       <span>暂无数据</span>
     </div>
@@ -66,11 +66,10 @@ export default {
   methods: {
     async getData() {
       const { result: data } = await getArticles(
-        this.channelId,
+        this.$route.query.channelId,
         this.pageNo,
         this.pageSize
       );
-
       this.infoList = data.content;
       this.total = data.total;
     },
@@ -99,7 +98,7 @@ export default {
   box-sizing: border-box;
   width: 1200px;
   margin: 0 auto;
-  margin-top: 300px;
+  margin-top: 30px;
 }
 .contentview ul {
   display: flex;
